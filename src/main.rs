@@ -5,19 +5,6 @@ use std::path::Path;
 
 fn main() {
 
-    solution_a();
- 
-}
-
-fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
-where P: AsRef<Path>, {
-    let file = File::open(filename)?;
-    Ok(io::BufReader::new(file).lines())
-}
-
-
-fn solution_a() {
-
     let mut current_elf        = 1usize;
     let mut current_cal        = 0u32;
     let mut max_cal_elf        = 1usize;
@@ -57,4 +44,10 @@ fn solution_a() {
 
 }
 
+
+fn read_lines<P>(filename: P) -> io::Result<io::Lines<io::BufReader<File>>>
+where P: AsRef<Path>, {
+    let file = File::open(filename)?;
+    Ok(io::BufReader::new(file).lines())
+}
 
